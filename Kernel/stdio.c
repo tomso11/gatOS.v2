@@ -239,3 +239,44 @@ int strcpy(char * to, const char * from) {
 	to[i] = '\0';
 	return i;
 }
+
+/* Copia en str los valores ascii de los digitos de value en la base indicada.
+** Devuelve la cantidad de digitos copiados. */
+int itoa(int value, char *str, int base) {
+	char *p = str;
+	char *p1, *p2;
+	int len = 0;
+
+	if(value < 0 && base == 10) {
+		value = -value;
+		len++;
+		*p++ = '-';
+		str++;
+	}
+
+	//Calculate characters for each digit
+	do
+	{
+		int remainder = value % base;
+		*p++ = (remainder < 10) ? remainder + '0' : remainder + 'A' - 10;
+		len++;
+	}
+	while (value /= base);
+
+	// Terminate string in str.
+	*p = '\0';
+
+	//Reverse string in str.
+	p1 = str;
+	p2 = p - 1;
+	while (p1 < p2)
+	{
+		char tmp = *p1;
+		*p1 = *p2;
+		*p2 = tmp;
+		p1++;
+		p2--;
+	}
+
+	return len;
+}

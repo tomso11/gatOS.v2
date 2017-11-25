@@ -13,6 +13,8 @@
 #define MAX_BLOCKED_QUEUE_SIZE 20
 #define MAX_MUTEX_PIDS 20
 
+#define MUTEX_NAME_LEN 64
+
 #define MAX_MUTEXES 100
 
 #define FALSE 0
