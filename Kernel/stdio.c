@@ -231,3 +231,11 @@ int strcmpN(char * str1, char * str2,int number){
 	}
 	return 1;
 }
+
+int strcpy(char * to, const char * from) {
+	int i;
+	for (i = 0; from[i] != '\0'; i++)
+		to[i] = from[i];
+	to[i] = '\0';
+	return i;
+}

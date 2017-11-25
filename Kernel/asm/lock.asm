@@ -1,6 +1,7 @@
 ;lock.asm
 
 GLOBAL _testAndSet
+GLOBAL _unlocked
 
 ; returns 1 if lock acquired, else 0
 _testAndSet:
@@ -29,4 +30,9 @@ _testAndSet:
 
     mov rsp, rbp
     pop rbp
+    ret
+
+_unlocked:
+  mov rax, 0
+  xchg rax, [rdi]
     ret
