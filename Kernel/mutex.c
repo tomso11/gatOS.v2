@@ -37,13 +37,6 @@ void initialize_process_mutex() {
 */
 extern int _unlocked(int64_t * locknum);
 
-void set_superlock() {
-	superlock = LOCKED;
-}
-
-void unset_superlock() {
-	superlock = UNLOCKED;
-}
 
 /* +++ Manejo de special lock mutex array  +++ */
 static void lock_array() {

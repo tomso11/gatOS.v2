@@ -24,7 +24,7 @@ int createProcess(void * entryPoint, char * description , void * args);
 int getCurrentPid();
 void changeProcessState(int pid, processState state);
 void addProcess(Process * process);
-void * next_process(void * current_rsp);
+void * nextProcess(void * current_rsp);
 void schedule();
 StackFrame * switchUserToKernel(void * esp);
 StackFrame * switchKernelToUser();

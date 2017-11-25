@@ -113,7 +113,7 @@ void restartSHELL(){
 }
 
 
-void * next_process(void * current_rsp){
+void * nextProcess(void * current_rsp){
 	void * ans;
 	if (current == NULL){
 		return current_rsp;

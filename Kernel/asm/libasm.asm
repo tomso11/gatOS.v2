@@ -22,7 +22,7 @@ extern switchKernelToUser
 global finishStartup
 extern getCurrentEntryPoint
 extern print
-extern next_process
+extern nextProcess
 global readCR2
 extern printrsi
 
@@ -307,7 +307,7 @@ _yield:
 
 to_next:
 	mov rdi, rsp
-	call next_process
+	call nextProcess
 
 	mov rsp, rax
 

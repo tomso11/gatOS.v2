@@ -17,6 +17,9 @@
 
 #define MAX_MUTEXES 100
 
+#define LOCKED 0
+#define UNLOCKED 1
+
 #define FALSE 0
 #define TRUE 1
 #define MUTEX_NOT_FOUND -1
